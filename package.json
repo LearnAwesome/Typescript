@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/codefine/learn-typescript#readme",
   "devDependencies": {
-    "@types/node": "^10.1.4",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^10.5.1",
     "typescript": "^2.8.3"
   },
   "dependencies": {}

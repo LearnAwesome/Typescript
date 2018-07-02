@@ -1,4 +1,8 @@
-// 在 TypeScript 中，我们使用接口（Interfaces）来定义对象的类型。
+// 接口
+
+// 在 TypeScript 中，我们使用接口（Interfaces）来定义对象的类型
+//                                             ^^^^^^^^^^^^^
+
 // 常用于对对象的形状（Shape）进行描述
 // 形状必须完全一致
 /*
@@ -54,7 +58,7 @@ const person: IPerson = {
   name: 'Tom',
   sex: 'male'
 };
-// 一旦定义了任意属性，那么确定属性和可选属性都必须是它的子属性
+// 一旦定义了任意属性，那么确定属性和可选属性都必须是它的子属性 ++++++++++++++++++++
 interface IPerson {
   name: string;
   age?: number; // error TS2411: Property 'age' of type 'number' is not assignable to string index type 'string | boolean'.

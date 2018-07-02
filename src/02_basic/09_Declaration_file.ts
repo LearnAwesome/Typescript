@@ -2,6 +2,6 @@
 
 // 先用npm install @types/lodash安装声明文件
 // 可以在http://microsoft.github.io/TypeSearch/寻找声明文件
-import * as _ from "lodash";
+import * as _ from "lodash"; /* tslint-disable-line */
 
-console.log(_.partition([1, 2, 3, 4], n => n % 2));
+console.log(_.partition([1, 2, 3, 4], (n: any) => n % 2));

@@ -1,4 +1,5 @@
-// 联合类型（Union Types）表示取值可以为多种类型中的一种。
+// 联合类型（Union Types）
+// 表示取值可以为多种类型中的一种。
 /*
 let myNumber: string | number;
 myNumber = 'seven';
@@ -14,7 +15,7 @@ function foo(some: string | number) {
 }
 */
 
-// 联合类型的变量在被赋值的时候，会根据类型推论的规则推断出一个类型，并确定后续该变量属性或方法操作的合法性
+// 联合类型的变量在被赋值的时候，会根据类型推论的规则推断出一个类型，并确定后续该变量属性或方法操作的合法性 ++++++++++++++++++++
 /*
 let myNumber: string | number;
 myNumber = 'seven';

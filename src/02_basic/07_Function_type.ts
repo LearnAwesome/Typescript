@@ -77,12 +77,14 @@ console.log(array);
 // }
 
 // 重载写法
+/*
 function reverse(x: number): number; // 参数为数字时，返回数字
 function reverse(x: string): string; // 参数为字符串时，返回字符串
-function reverse(x) { // 具体实现
+function reverse(x: any) { // 具体实现
   if (typeof x === 'number') {
     return Number(x.toString().split('').reverse().join(''));
   } else if (typeof x === 'string') {
     return x.split('').reverse().join('');
   }
 }
+*/

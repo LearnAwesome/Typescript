@@ -1,7 +1,9 @@
+// 原始数据类型
+
 // <1> boolean 布尔值
 /*
 const isDone: boolean = true; // success
-const isDone: boolean = new Boolean(1); // error TS2322: Type 'Boolean' is not assignable to type 'boolean'.
+const isDone: boolean = new Boolean(1); // error TS2322: Type 'Boolean' is not assignable to type 'boolean'. +++++++++++++++++++
 const isDone: boolean = Boolean(1); // success
 */
 
@@ -38,7 +40,7 @@ const unusable3: void = 1; // error TS2322: Type '1' is not assignable to type '
 const u: undefined = undefined;
 const n: null = null;
 
-// 与void的区别，void不是所有类型的子类型，不能赋值给其他类型
+// 与void的区别，void不是所有类型的子类型，不能赋值给其他类型 +++++++++++++++++++
 const a: number = undefined; // success
 const b: number = void; // error TS1109: Expression expected.
 */
