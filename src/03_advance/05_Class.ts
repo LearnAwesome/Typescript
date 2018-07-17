@@ -13,15 +13,83 @@
 * 接口（Interfaces）：不同类之间公有的属性或方法，可以抽象成一个接口。接口可以被类实现（implements）。一个类只能继承自另一个类，但是可以实现多个接口
 */
 
+// 基本写法
+/** 包括全部的ES6特性
+ * 构造器 constructor
+ * 属性及方法
+ * 继承 extends super()
+ * 存取器 getter setter
+ * 静态方法 static method()
+ */
+
+/** 包括ES7特性
+ * 静态属性 static prop = something;
+ */
+/*
 class Animal {
-  public name;
-  public constructor(name) {
+  static type: string = 'Parent';
+  name: string;
+  constructor(name) {
     this.name = name;
+  }
+  say() {
+    console.log(`Hello, my name is ${this.name} (${Animal.type})`);
+  }
+}
+const animal = new Animal('Jack');
+animal.say(); // 'Hello, my name is Jack (Parent)'
+*/
+
+// 访问修饰符 Access Modifiers
+// public 公有，可以在任何地方访问到（默认）
+// private 私有，只能在类的内部访问到，并且不能在子类中直接访问
+// protected 受保护，只能在类的内部访问到，但是可以被子类访问
+/*
+  class Animal {
+    private name: string = 'Jack';
+    protected id: number;
+    constructor() {
+      this.id = 1;
+    }
+    say(): void {
+      console.log(this.name);
+    }
+  }
+  const animal = new Animal();
+  // console.log(animal.name); // ERROR: Property 'name' is private and only accessible within class 'Animal'.
+  animal.say(); // 'Jack'
+  
+  class Cat extends Animal {
+    constructor() {
+      super();
+      // console.log(this.name); // ERROR: Property 'name' is private and only accessible within class 'Animal'.
+      console.log(this.id); // 1
+    }
+  }
+  const cat = new Cat();
+  cat.say(); // 'Jack' 继承来的父类的方法中，直接访问了父类的私有属性，不受影响
+*/
+
+// 抽象类及抽象方法 abstract
+// 抽象类：不允许被实例化，只能用来被继承
+// 抽象方法：必须通过子类去实现
+/*
+abstract class Animal {
+  name: string;
+  constructor(name) {
+    this.name = name;
+  }
+  abstract say(): void;
+}
+// const animal = new Animal('Jack'); // ERROR: Cannot create an instance of an abstract class.
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
   }
   say() {
     console.log(`Hello, my name is ${this.name}`);
   }
 }
-
-const animal = new Animal('Jack');
-animal.say();
+const cat = new Cat('Jack');
+cat.say(); // 'Hello, my name is Jack'
+*/

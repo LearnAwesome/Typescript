@@ -83,3 +83,14 @@ const person: IPerson = {
 console.log(person.id);
 person.id = 9528; // error TS2540: Cannot assign to 'id' because it is a constant or a read-only property.
 */
+
+// 接口定义函数
+// interface ICounter {
+//   (start: number): number;
+// }
+
+// const counter = <ICounter>function (start) {
+//   return start ++;
+// }
+
+// counter(1);
