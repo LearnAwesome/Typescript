@@ -34,13 +34,14 @@ console.log( greeter(user) );
 */
 
 // 类
-/*
+/**/
+
 class Student {
   fullName: string;
   constructor(
-    public firstName,
-    public middleInitail,
-    public lastName
+    public firstName: any,
+    public middleInitail: string,
+    public lastName: string
   ) {
     this.fullName = firstName + middleInitail + lastName;    
   }
@@ -54,4 +55,3 @@ function greeter(person: Person) {
   return "Hello, " + person.firstName + " " + person.lastName;
 }
 console.log( greeter(user) );
-*/
