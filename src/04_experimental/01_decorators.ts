@@ -7,9 +7,9 @@ function classDecorator<T extends { new(...args:any[]):{} }>(constructor:T) {
 
 @classDecorator
 class Greeter {
-    property = "property";
-    hello: string;
-    constructor(m: string) {
+    private property = "property";
+    private hello: string;
+    constructor(private m: string) {
         this.hello = m;
     }
 }
